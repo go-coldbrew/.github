@@ -45,7 +45,7 @@ options → errors → log → tracing → grpcpool → interceptors → data-bu
 
 ### Before You Start
 
-1. **Open an issue first** — discuss the change before investing time in a PR
+1. **Open an issue first** — discuss the change before investing time in a PR. (Do not open public issues for security vulnerabilities; see [SECURITY.md](SECURITY.md) for private disclosure instructions.)
 2. **Check existing issues** — someone may already be working on it
 3. **One concern per PR** — keep changes focused and reviewable
 
