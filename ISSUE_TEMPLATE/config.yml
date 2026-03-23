@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/go-coldbrew/core/discussions/categories/q-a
+    about: Use GitHub Discussions for questions, help, and general discussion
+  - name: Documentation
+    url: https://docs.coldbrew.cloud
+    about: Check the documentation for guides and API reference
+  - name: Security Vulnerability
+    url: https://github.com/go-coldbrew/.github/blob/main/SECURITY.md
+    about: Report security vulnerabilities privately (do not open a public issue)
