@@ -1,15 +1,26 @@
-## What does this PR do?
+## Description
 
-<!-- Brief description of the change -->
+<!-- What does this PR do? Why is it needed? -->
 
-## Why is this change needed?
+## Package(s) Affected
 
-<!-- Link to issue or explain the motivation -->
+<!-- Which ColdBrew package(s) does this change? -->
+
+- [ ] core
+- [ ] interceptors
+- [ ] errors
+- [ ] log
+- [ ] tracing
+- [ ] options
+- [ ] grpcpool
+- [ ] data-builder
+- [ ] cookiecutter-coldbrew
+- [ ] docs
 
 ## Checklist
 
-- [ ] Tests added/updated and passing (`make test`)
-- [ ] Linting passes (`make lint`)
+- [ ] Tests pass (`make test`)
+- [ ] Linter passes (`make lint`)
 - [ ] README regenerated if exported APIs changed (`make doc`)
-- [ ] No breaking changes to public API
-- [ ] Commit messages are clear and descriptive
+- [ ] No breaking changes
+- [ ] Doc comments added for new exported APIs
