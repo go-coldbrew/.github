@@ -19,7 +19,7 @@
 
 ColdBrew is a collection of Go libraries for creating cloud-native microservices. It provides ready-made components for gRPC servers with HTTP gateways, structured logging, distributed tracing, metrics, error tracking, and circuit breaking — all wired together with sensible defaults.
 
-**Production-proven:** Powers 100+ microservices serving 70k+ QPS each.
+**Production-proven:** Powers 100+ microservices, handling peaks of ~70k QPS per service.
 
 ### Packages
 
