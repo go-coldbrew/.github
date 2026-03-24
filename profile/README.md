@@ -5,21 +5,38 @@
 <h1 align="center">ColdBrew</h1>
 
 <p align="center">
-  <strong>A Go microservice framework for building production-grade gRPC services</strong>
+  <strong>A Kubernetes-native Go microservice framework for building production-grade gRPC services</strong>
 </p>
 
 <p align="center">
   <a href="https://docs.coldbrew.cloud">Documentation</a> &middot;
   <a href="https://docs.coldbrew.cloud/getting-started">Getting Started</a> &middot;
   <a href="https://docs.coldbrew.cloud/packages">Packages</a> &middot;
-  <a href="https://docs.coldbrew.cloud/howto">How-To Guides</a>
+  <a href="https://docs.coldbrew.cloud/howto">How-To Guides</a> &middot;
+  <a href="https://docs.coldbrew.cloud/config-reference">Config Reference</a>
 </p>
 
 ---
 
-ColdBrew is a collection of Go libraries for creating cloud-native microservices. It provides ready-made components for gRPC servers with HTTP gateways, structured logging, distributed tracing, metrics, error tracking, and circuit breaking — all wired together with sensible defaults.
+ColdBrew is a collection of Go libraries for creating cloud-native microservices. Built for Kubernetes, follows [12-factor](https://12factor.net/) principles, production-proven at 100+ microservices handling ~70k QPS each.
 
-**Production-proven:** Powers 100+ microservices, handling peaks of ~70k QPS per service.
+### What You Get Out of the Box
+
+| Feature | Description |
+|---------|-------------|
+| **gRPC + REST Gateway** | Define your API once in protobuf — get gRPC, REST, and Swagger docs automatically via [grpc-gateway](https://grpc-ecosystem.github.io/grpc-gateway/) |
+| **Structured Logging** | Pluggable backends (go-kit, zap, logrus) with per-request context fields and trace ID propagation |
+| **Distributed Tracing** | [OpenTelemetry](https://opentelemetry.io/), [Jaeger](https://www.jaegertracing.io/), and [New Relic](https://newrelic.com/) support with automatic span creation |
+| **Prometheus Metrics** | Built-in request latency, error rate, and circuit breaker metrics at `/metrics` |
+| **Error Tracking** | Stack traces, gRPC status codes, and async notification to [Sentry](https://sentry.io/), Rollbar, or Airbrake |
+| **Resilience** | Client-side circuit breaking and retries via interceptors |
+| **Fast Serialization** | [vtprotobuf](https://github.com/planetscale/vtprotobuf) codec enabled by default — faster gRPC marshalling with automatic fallback |
+| **Kubernetes-native** | Health/ready probes, graceful SIGTERM shutdown, structured JSON logs, env var config via [envconfig](https://github.com/kelseyhightower/envconfig) |
+| **Swagger / OpenAPI** | Interactive API docs auto-served at `/swagger/` from your protobuf definitions |
+| **Profiling** | Go pprof endpoints at `/debug/pprof/` for CPU, memory, goroutine, and trace profiling |
+| **gRPC Reflection** | Server reflection enabled by default — works with [grpcurl](https://github.com/fullstorydev/grpcurl), grpcui, and Postman |
+| **HTTP Compression** | Automatic gzip compression for all HTTP gateway responses |
+| **Container-aware Runtime** | Auto-tunes GOMAXPROCS to match container CPU limits via [automaxprocs](https://github.com/uber-go/automaxprocs) |
 
 ### Packages
 
