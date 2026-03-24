@@ -36,7 +36,7 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 
 ### Package Dependencies
 
-```
+```text
 options → errors → log → tracing → grpcpool → interceptors → data-builder → core
 ```
 
@@ -50,7 +50,7 @@ brew install cookiecutter  # or: pip install cookiecutter
 cookiecutter gh:go-coldbrew/cookiecutter-coldbrew
 
 # Build and run
-cd MyService/
+cd YourService/
 make run
 ```
 
