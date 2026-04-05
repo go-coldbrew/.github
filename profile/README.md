@@ -25,7 +25,7 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 | Feature | Description |
 |---------|-------------|
 | **gRPC + REST Gateway** | Define your API once in protobuf — get gRPC, REST, and Swagger docs automatically via [grpc-gateway](https://grpc-ecosystem.github.io/grpc-gateway/) |
-| **Structured Logging** | Pluggable backends (go-kit, zap, logrus) with per-request context fields and trace ID propagation |
+| **Structured Logging** | Pluggable backends (slog default, zap, logrus) with per-request context fields and trace ID propagation |
 | **Distributed Tracing** | [OpenTelemetry](https://opentelemetry.io/), [Jaeger](https://www.jaegertracing.io/), and [New Relic](https://newrelic.com/) support with automatic span creation |
 | **Prometheus Metrics** | Built-in request latency, error rate, and circuit breaker metrics at `/metrics` |
 | **Error Tracking** | Stack traces, gRPC status codes, and async notification to [Sentry](https://sentry.io/), Rollbar, or Airbrake |
@@ -50,11 +50,13 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 | [**options**](https://github.com/go-coldbrew/options) | Request-scoped key-value store using context |
 | [**grpcpool**](https://github.com/go-coldbrew/grpcpool) | Round-robin gRPC connection pool |
 | [**data-builder**](https://github.com/go-coldbrew/data-builder) | Dependency injection with automatic resolution and parallel execution |
+| [**workers**](https://github.com/go-coldbrew/workers) | Background worker lifecycle with panic recovery, restart, tracing, and metrics |
 
 ### Package Dependencies
 
 ```text
 options → errors → log → tracing → grpcpool → interceptors → data-builder → core
+                                                               workers ↗
 ```
 
 ### Quick Start
