@@ -17,6 +17,7 @@ body:
         - options
         - grpcpool
         - data-builder
+        - workers
         - cookiecutter-coldbrew
         - New package / cross-cutting
     validations:

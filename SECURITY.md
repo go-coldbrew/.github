@@ -14,6 +14,7 @@ Only the **latest released version** of each ColdBrew package receives security 
 | options | Latest release |
 | grpcpool | Latest release |
 | data-builder | Latest release |
+| workers | Latest release |
 | hystrixprometheus | Not supported (deprecated) |
 
 ## Reporting a Vulnerability
