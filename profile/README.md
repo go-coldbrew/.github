@@ -35,8 +35,11 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 | **Swagger / OpenAPI** | Interactive API docs auto-served at `/swagger/` from your protobuf definitions |
 | **Profiling** | Go pprof endpoints at `/debug/pprof/` for CPU, memory, goroutine, and trace profiling |
 | **gRPC Reflection** | Server reflection enabled by default — works with [grpcurl](https://github.com/fullstorydev/grpcurl), grpcui, and Postman |
-| **HTTP Compression** | Automatic gzip compression for all HTTP gateway responses |
+| **HTTP Compression** | Automatic gzip and zstd compression for all HTTP gateway responses (content-negotiated) |
+| **Request Validation** | [Protovalidate](https://github.com/bufbuild/protovalidate) annotations enforced automatically on both gRPC and HTTP requests |
 | **Container-aware Runtime** | Auto-tunes GOMAXPROCS to match container CPU limits via [automaxprocs](https://github.com/uber-go/automaxprocs) |
+| **CI/CD Pipelines** | Ready-to-use GitHub Actions and GitLab CI workflows for build, test, lint, and benchmarks |
+| **Local Dev Stack** | Docker Compose with 19 services across 18 profiles + obs group — databases, caches, brokers, AWS/GCP emulators, Grafana, Jaeger |
 
 ### Packages
 
@@ -45,8 +48,8 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 | [**core**](https://github.com/go-coldbrew/core) | gRPC server + HTTP gateway, health checks, metrics, signal handling, graceful shutdown |
 | [**interceptors**](https://github.com/go-coldbrew/interceptors) | gRPC server/client interceptors for logging, tracing, metrics, errors, retries |
 | [**errors**](https://github.com/go-coldbrew/errors) | Enhanced errors with stack traces, gRPC status codes, error notification (Sentry/Rollbar) |
-| [**log**](https://github.com/go-coldbrew/log) | Structured logging with pluggable backends (go-kit, zap, logrus) |
-| [**tracing**](https://github.com/go-coldbrew/tracing) | Distributed tracing via OpenTelemetry, OpenTracing, Jaeger, New Relic |
+| [**log**](https://github.com/go-coldbrew/log) | Structured logging with pluggable backends (slog default, zap, logrus) |
+| [**tracing**](https://github.com/go-coldbrew/tracing) | Distributed tracing via OpenTelemetry, Jaeger, New Relic |
 | [**options**](https://github.com/go-coldbrew/options) | Request-scoped key-value store using context |
 | [**grpcpool**](https://github.com/go-coldbrew/grpcpool) | Round-robin gRPC connection pool |
 | [**data-builder**](https://github.com/go-coldbrew/data-builder) | Dependency injection with automatic resolution and parallel execution |
