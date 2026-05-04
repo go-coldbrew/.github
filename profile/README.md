@@ -31,7 +31,7 @@ ColdBrew is a collection of Go libraries for creating cloud-native microservices
 | **Error Tracking** | Stack traces, gRPC status codes, and async notification to [Sentry](https://sentry.io/), Rollbar, or Airbrake |
 | **Resilience** | Client-side circuit breaking and retries via interceptors |
 | **Fast Serialization** | [vtprotobuf](https://github.com/planetscale/vtprotobuf) codec enabled by default — faster gRPC marshalling with automatic fallback |
-| **Kubernetes-native** | Health/ready probes, graceful SIGTERM shutdown, structured JSON logs, env var config via [envconfig](https://github.com/kelseyhightower/envconfig) |
+| **Kubernetes-native** | Health/ready probes, graceful SIGTERM shutdown, structured JSON logs, env var config via [envconfig](https://github.com/kelseyhightower/envconfig) or compatible `env:`-tag loaders |
 | **Swagger / OpenAPI** | Interactive API docs auto-served at `/swagger/` from your protobuf definitions |
 | **Profiling** | Go pprof endpoints at `/debug/pprof/` for CPU, memory, goroutine, and trace profiling |
 | **gRPC Reflection** | Server reflection enabled by default — works with [grpcurl](https://github.com/fullstorydev/grpcurl), grpcui, and Postman |
